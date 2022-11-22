@@ -6,12 +6,11 @@
     <title>User</title>
 </head>
 <body>
-<span>
-    Name:
-</span>
-<span th:text="${user.getName()}"> Name</span>
+<p> Name:
+    <span th:text="${user.getName()}"> Name</span>
+</p>
 <p> Last Name:
-    <span th:text="${user.getLast_name()}"> Name</span>
+    <span th:text="${user.getLastname()}"> Name</span>
 </p>
 <p> Email:
     <span th:text="${user.getEmail()}"> Name</span>

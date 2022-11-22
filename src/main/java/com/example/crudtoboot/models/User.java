@@ -11,29 +11,25 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "id", unique = true, nullable = false)
     private Long id;
 
-    @Column(name = "name")
     private String name;
 
-    @Column(name = "lastname")
-    private String last_name;
+    private String lastname;
 
-    @Column(name = "email")
     private String email;
 
     public User() {
     }
 
-    public User(String name, String last_name, String email) {
+    public User(String name, String lastname, String email) {
         this.name = name;
-        this.last_name = last_name;
+        this.lastname = lastname;
         this.email = email;
     }
 
-    public User(Long id, String name, String last_name, String email) {
-        this(name, last_name, email);
+    public User(Long id, String name, String lastname, String email) {
+        this(name, lastname, email);
         this.id = id;
     }
 
@@ -53,12 +49,12 @@ public class User {
         this.name = name;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setLastname(String last_name) {
+        this.lastname = last_name;
     }
 
     public String getEmail() {
